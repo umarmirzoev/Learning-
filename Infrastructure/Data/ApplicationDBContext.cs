@@ -5,7 +5,7 @@ public class ApplicationDBContext(DbContextOptions<ApplicationDBContext> options
     public DbSet<CourseProgress> CourseProgresses  {get; set;}
     public DbSet<Enrollment> Enrollments  {get; set;}
     public DbSet<Lesson> Lessons  {get; set;}
-    public DbSet<InstructorProfile> InstructorProfiles   {get; set;}
+    public DbSet<InstructorProfile> InstructorProfiles{get; set;}
     public DbSet<Module> Modules   {get; set;}
     public DbSet<StudentProfile> StudentProfiles   {get; set;}
     public DbSet<User> Users {get; set;}

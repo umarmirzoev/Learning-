@@ -142,3 +142,8 @@ C:\Users\HP\Desktop\E-Learning Platform\webApi\obj\Debug\net9.0\webApi.pdb
 C:\Users\HP\Desktop\E-Learning Platform\webApi\obj\Debug\net9.0\webApi.genruntimeconfig.cache
 C:\Users\HP\Desktop\E-Learning Platform\webApi\obj\Debug\net9.0\ref\webApi.dll
 C:\Users\HP\Desktop\E-Learning Platform\webApi\obj\Debug\net9.0\webApi.sourcelink.json
+C:\Users\HP\Desktop\E-Learning Platform\webApi\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\HP\Desktop\E-Learning Platform\webApi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\HP\Desktop\E-Learning Platform\webApi\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\HP\Desktop\E-Learning Platform\webApi\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\HP\Desktop\E-Learning Platform\webApi\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

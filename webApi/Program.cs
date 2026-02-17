@@ -6,6 +6,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using WebApi.Services;
+using Quartz;
+using WebApi.Workers;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +24,22 @@ builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSet
 
  
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+builder.Services.AddHostedService<EmailWorker>();
+builder.Services.AddQuartz(q =>
+{
+    var jobKey = new JobKey("ReportJob");
+
+    q.AddJob<ReportJob>(opts => opts.WithIdentity(jobKey));
+
+    q.AddTrigger(opts => opts
+        .ForJob(jobKey)
+        .WithSimpleSchedule(x =>
+            x.WithIntervalInSeconds(10)
+             .RepeatForever()));
+});
+
+builder.Services.AddQuartzHostedService();
+
 
 // Email Settings Configuration
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
